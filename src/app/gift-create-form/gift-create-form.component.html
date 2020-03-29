@@ -1,0 +1,53 @@
+<div class="container">
+
+
+  <form [formGroup]="giftForm" >
+
+
+
+      <div class="form-group">
+        <label for="">Product Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+      </div>
+
+      <div class="form-group">
+        <label for="">Cover Image</label>
+        <input type="text" class="form-control" formControlName="coverImage" placeholder="Enter Image">
+      </div>
+
+      <div class="form-group">
+        <label for="">Price</label>
+        <input type="number" class="form-control" formControlName="price" placeholder="Enter Price">
+      </div>
+
+      <div class="form-group " >
+        <label for="">Category select</label>
+
+        <select class="form-control" formControlName="category" (click)="selectCategory()">
+          <option >{{categoryName|json}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="">Description</label>
+        <textarea class="form-control" formControlName="description" rows="3"></textarea>
+      </div>
+
+
+<!--    <div class="form-group">-->
+<!--      <label for="">Name</label>-->
+<!--      <input type="text" class="form-control" formControlName="name" placeholder="Enter name">-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--      <label for="">Description</label>-->
+<!--      <input type="text" class="form-control" formControlName="description" placeholder="Enter Price">-->
+<!--    </div>-->
+
+    </form>
+
+
+
+  <button  type="submit" (click)="save()" >Create</button>
+</div>
